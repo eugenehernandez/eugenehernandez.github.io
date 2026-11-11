@@ -40,7 +40,7 @@ section{margin-bottom:40px}
 .skills b{display:block;font-size:14px;color:var(--accent)}
 footer{border-top:1px solid var(--rule);padding-top:18px;font-size:14px;color:var(--muted)}
 footer a{color:var(--accent)}
-@media (min-width:760px){.grid{grid-template-columns:1fr 1fr}.card.feature{grid-column:1 / -1}}
+
 @media (max-width:560px){main{padding:36px 18px 56px}h1{font-size:32px}.skills{columns:1}}
 </style>
 </head>
@@ -58,10 +58,10 @@ footer a{color:var(--accent)}
   <h2>Projects</h2>
   <div class="grid">
 
-    <article class="card feature">
+    <article class="card">
       <h3><a href="https://eugenehernandez.github.io/PartD_Prescriber_Anomaly/">Medicare Part D Prescriber Anomaly Detection</a></h3>
       <p class="tags">Python · SQL · DuckDB · Spark · scikit-learn · MLflow · Databricks</p>
-      <p>Peer-relative anomaly detection on 1.2 million Medicare Part D prescribers a year, using an Isolation Forest checked against a simple peer z-score rule. Without fraud labels, the flags are validated against later exclusions from Medicare by the HHS Office of Inspector General. In 2023 data, prescribers in the top 1% were about four times as likely to be excluded later, and the forest beat the baseline at every cut-off. Every filter and join is logged with record counts, and the scoring method was fixed before each year's results were seen.</p>
+      <p>Peer-relative anomaly detection on about 1.2 million Medicare Part D prescribers a year, using an Isolation Forest validated against later exclusions from Medicare. Flagged prescribers were about four times as likely to be excluded later.</p>
       <p class="go"><a href="https://eugenehernandez.github.io/PartD_Prescriber_Anomaly/">Project page</a><a href="https://github.com/eugenehernandez/PartD_Prescriber_Anomaly">Code</a></p>
     </article>
 
