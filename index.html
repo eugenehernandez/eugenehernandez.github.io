@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eugene Hernandez | Data Science Portfolio</title>
+<meta name="description" content="Portfolio of Eugene Hernandez, data scientist and analytics leader. Medicare claims analytics, anomaly detection, data quality and governance, OMOP data engineering, CDISC clinical data, and LLM calibration research.">
+<link rel="canonical" href="https://eugenehernandez.github.io/">
+<meta property="og:title" content="Eugene Hernandez | Data Science Portfolio">
+<meta property="og:description" content="Medicare claims analytics, anomaly detection, OMOP data engineering, CDISC clinical data, and LLM calibration research.">
+<meta property="og:url" content="https://eugenehernandez.github.io/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<style>
+:root{--ink:#1d1b19;--muted:#5d5852;--rule:#e3ded6;--accent:#782F40;--tint:#f8f5f1;--bg:#fff}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:880px;margin:0 auto;padding:56px 24px 72px}
+header{border-bottom:3px solid var(--accent);padding-bottom:28px;margin-bottom:36px}
+h1{font-size:40px;line-height:1.1;margin:0 0 10px;letter-spacing:-.01em}
+.role{font-size:19px;color:var(--muted);margin:0 0 16px}
+.about{font-size:17px;max-width:720px;margin:0 0 18px}
+.links a{display:inline-block;margin:0 10px 8px 0;padding:7px 14px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);text-decoration:none;font-size:15px;font-weight:600}
+.links a:hover{background:var(--accent);color:#fff}
+h2{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin:0 0 16px}
+.grid{display:grid;grid-template-columns:1fr;gap:18px}
+.card{border:1px solid var(--rule);border-radius:10px;padding:20px 22px;background:var(--bg)}
+.card.feature{border-left:5px solid var(--accent);background:var(--tint)}
+.card h3{font-size:20px;margin:0 0 4px}
+.card h3 a{color:var(--ink);text-decoration:none}
+.card h3 a:hover{color:var(--accent);text-decoration:underline}
+.tags{font-size:13px;color:var(--muted);margin:0 0 10px;font-weight:600}
+.card p{margin:0 0 10px}
+.card .go{font-size:15px;font-weight:600}
+.card .go a{color:var(--accent);margin-right:16px}
+section{margin-bottom:40px}
+.skills{columns:2;column-gap:32px;padding:0;margin:0;list-style:none}
+.skills li{break-inside:avoid;margin:0 0 10px}
+.skills b{display:block;font-size:14px;color:var(--accent)}
+footer{border-top:1px solid var(--rule);padding-top:18px;font-size:14px;color:var(--muted)}
+footer a{color:var(--accent)}
+@media (min-width:760px){.grid{grid-template-columns:1fr 1fr}.card.feature{grid-column:1 / -1}}
+@media (max-width:560px){main{padding:36px 18px 56px}h1{font-size:32px}.skills{columns:1}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Eugene Hernandez</h1>
+  <p class="role">Data scientist and analytics leader · Healthcare claims, data quality and governance, and machine learning</p>
+  <p class="about">I build analytics that hold up to scrutiny, from data extraction to the final validation. I hold an M.S. in Statistical Data Science from Florida State University and lead the Office of Institutional Research at Pensacola State College, where my team runs state and federal reporting, data validation, data literacy, and research for college leadership. I also chair a statewide advisory taskforce on college data systems (MISATFOR) for the Florida Department of Education.</p>
+  <p class="about">Previously I was a Senior Associate Solution Consultant at SAS, working with state agencies on a range of projects. These included migrating and implementing Medicare and Medicaid processes and business rules, deploying and operating a program integrity system, linking records for the CJLEADS program, and supporting data projects for health, revenue, and transportation departments. I also teach statistics as adjunct faculty at Tallahassee State College.</p>
+  <p class="links"><a href="https://github.com/eugenehernandez/">github.com/eugenehernandez/</a><a href="https://linkedin.com/in/eugenehernandez/">linkedin.com/in/eugenehernandez/</a></p>
+</header>
+
+<section>
+  <h2>Projects</h2>
+  <div class="grid">
+
+    <article class="card feature">
+      <h3><a href="https://eugenehernandez.github.io/PartD_Prescriber_Anomaly/">Medicare Part D Prescriber Anomaly Detection</a></h3>
+      <p class="tags">Python · SQL · DuckDB · Spark · scikit-learn · MLflow · Databricks</p>
+      <p>Peer-relative anomaly detection on 1.2 million Medicare Part D prescribers a year, using an Isolation Forest checked against a simple peer z-score rule. Without fraud labels, the flags are validated against later exclusions from Medicare by the HHS Office of Inspector General. In 2023 data, prescribers in the top 1% were about four times as likely to be excluded later, and the forest beat the baseline at every cut-off. Every filter and join is logged with record counts, and the scoring method was fixed before each year's results were seen.</p>
+      <p class="go"><a href="https://eugenehernandez.github.io/PartD_Prescriber_Anomaly/">Project page</a><a href="https://github.com/eugenehernandez/PartD_Prescriber_Anomaly">Code</a></p>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://github.com/eugenehernandez/synpuf-omop-etl">CMS SynPUF to OMOP Common Data Model</a></h3>
+      <p class="tags">R · SQL · DuckDB · OHDSI</p>
+      <p>A reproducible, validated conversion of CMS synthetic Medicare claims to the OMOP Common Data Model v5.4, with every mapping decision documented. Built as a methods study of how ETL choices affect downstream real-world evidence results.</p>
+      <p class="go"><a href="https://github.com/eugenehernandez/synpuf-omop-etl">Code</a></p>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://eugenehernandez.github.io/clinical_data_science_portfolio/">Clinical Data Science Portfolio</a></h3>
+      <p class="tags">R · CDISC SDTM and ADaM · Quarto · renv</p>
+      <p>An SDTM to ADaM vignette for a simulated two-arm trial, with population flags, change from baseline, and structural QC checks. Also a documented cleaning of the CDC chronic disease indicators for diabetes.</p>
+      <p class="go"><a href="https://eugenehernandez.github.io/clinical_data_science_portfolio/">Project page</a><a href="https://github.com/eugenehernandez/clinical_data_science_portfolio">Code</a></p>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://github.com/eugenehernandez/llm-calibration-statistics">Do Language Models Know When They Are Wrong?</a></h3>
+      <p class="tags">Python · LLM evaluation · Calibration</p>
+      <p>Measures whether a language model's confidence matches its accuracy on 65 probability and statistics questions, comparing stated confidence with sampling consistency.</p>
+      <p class="go"><a href="https://github.com/eugenehernandez/llm-calibration-statistics">Code</a></p>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://github.com/eugenehernandez/Machine_Learning_Lab">Machine Learning Lab</a></h3>
+      <p class="tags">Python · NumPy · scikit-learn · TensorFlow</p>
+      <p>Graduate machine learning notebooks with several algorithms built from scratch in NumPy, including logistic regression, LogitBoost, and hidden Markov models, each compared on standard high-dimensional benchmarks.</p>
+      <p class="go"><a href="https://github.com/eugenehernandez/Machine_Learning_Lab">Code</a></p>
+    </article>
+
+  </div>
+</section>
+
+<section>
+  <h2>Tools</h2>
+  <ul class="skills">
+    <li><b>Languages</b>SAS, Python, R, SQL</li>
+    <li><b>Data platforms</b>DuckDB, Spark and Databricks, Snowflake</li>
+    <li><b>Modeling</b>scikit-learn, Isolation Forest, regression, mixture models, MLflow</li>
+    <li><b>Health data standards</b>OMOP CDM, CDISC SDTM and ADaM, Medicare and Medicaid claims</li>
+    <li><b>Reporting</b>Quarto, R Markdown, Power BI, Tableau</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Eugene Hernandez · <a href="https://github.com/eugenehernandez/">github.com/eugenehernandez/</a></p>
+</footer>
+</main>
+</body>
+</html>
